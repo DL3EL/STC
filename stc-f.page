@@ -1,0 +1,93 @@
+config:
+  label: STCf
+  layoutType: responsive
+  sidebar: true
+blocks:
+  - component: oh-block
+    config: {}
+    slots:
+      default:
+        - component: oh-grid-cells
+          config: {}
+          slots:
+            default:
+              - component: oh-label-cell
+                config:
+                  action: group
+                  actionGroupPopupItem: STCf
+                  expandable: false
+                  item: STCf_Status
+                  stateAsHeader: true
+                  title: STCf
+              - component: oh-label-cell
+                config:
+                  expandable: false
+                  item: STCf_nightValue
+                  stateAsHeader: true
+                  title: STCf_nightValue
+              - component: oh-slider-cell
+                config:
+                  header: Nacht-Temperatur
+                  item: STCf_Nachttemperatur
+                  label: true
+                  max: 25
+                  min: 5
+                  releaseOnly: true
+                  scale: true
+                  scaleSteps: 1
+                  step: 1
+              - component: oh-slider-cell
+                config:
+                  item: STCf_Tagtemperatur
+                  label: true
+                  max: 30
+                  min: 5
+                  releaseOnly: true
+                  scale: true
+                  scaleSteps: 1
+                  step: 1
+                  title: Tag-Temperatur
+              - component: oh-label-cell
+                config:
+                  expandable: false
+                  item: STCf_ControlValue
+                  stateAsHeader: true
+                  title: STCf_ControlValue
+masonry:
+  - component: oh-masonry
+    slots:
+      default:
+        - component: oh-gauge-card
+          config:
+            item: STCf_Nachttemperatur
+            max: 25
+            min: 5
+            title: N8Temp
+            type: semicircle
+        - component: oh-stepper-card
+          config:
+            item: STCf_Nachttemperatur
+            large: true
+            max: 25
+            min: 5
+            raised: true
+            step: 1
+            title: N8Temp
+        - component: oh-gauge-card
+          config:
+            item: STCf_Tagtemperatur
+            labelText: C
+            max: 30
+            min: 5
+            title: STCf Tagtemp
+            type: semicircle
+        - component: oh-stepper-card
+          config:
+            item: STCf_Tagtemperatur
+            max: 30
+            min: 5
+            raised: true
+            step: 1
+            title: STCf Tagtemp
+grid: []
+canvas: null

@@ -1,0 +1,23 @@
+rule "STCf_Nachttemperatur"
+  when
+	Item STCf_Nachttemperatur received update
+  then
+          var Number celsius = STCf_Nachttemperatur.state as Number
+          var Number kelvin = celsius+273.15
+
+          sendHttpGetRequest("http://192.168.241.191/control?nightValue=" + kelvin)
+          logInfo("STCf-Nacht", "Kelvin:{} Celsius:{}", kelvin, celsius)
+  end
+ 
+rule "STCf_Tagtemperatur"
+  when
+	Item STCf_Tagtemperatur received update
+  then
+          var Number celsius = STCf_Tagtemperatur.state as Number
+          var Number kelvin = celsius+273.15
+
+          sendHttpGetRequest("http://192.168.241.191/control?controlValue=" + kelvin)
+          logInfo("STCf-Tag", "Kelvin:{} Celsius:{}", kelvin, celsius)
+
+  end
+ 
