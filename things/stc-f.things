@@ -1,0 +1,19 @@
+Thing http:url:STCf "STCf" [ baseURL="http://192.168.241.191/", stateMethod="GET", refresh=30, commandMethod="GET", contentType="text/plain" ] {
+    Channels:
+      Type string : STCfmacSTA "STCf_macSTA" [ stateExtension="debug/query", stateTransformation="REGEX:.*STA=(.*)&macAP.*" ] 
+      Type string : STCfmacAP "STCf macAP" [ stateExtension="debug/query", stateTransformation="REGEX:.*AP=(.*)&version=.*" ] 
+      Type string : STCfVersion "STCf Version" [ stateExtension="debug/query", stateTransformation="REGEX:.*version=(.*)&version-data.*" ] 
+      Type string : STCfVersionData "STCf VersionData" [ stateExtension="debug/query", stateTransformation="REGEX:.*version-data=(.*)&wifi.*" ] 
+      Type string : STCfSSID "STCf SSID" [ stateExtension="debug/query", stateTransformation="REGEX:.*ssid=(.*)&adccal.slope.*" ] 
+      Type string : STCfAS "STCf adcal.slope" [ stateExtension="debug/query", stateTransformation="REGEX:.*slope=(.*)&adccal.offset.*" ] 
+      Type string : STCfAO "STCf adcal.offset" [ stateExtension="debug/query", stateTransformation="REGEX:.*offset=(.*)&sensor.*" ] 
+      Type string : STCfSensor "STCf Sensor" [ stateExtension="debug/query", stateTransformation="REGEX:.*sensor=(.*)&enab.*" ] 
+      Type string : STCfStatus "STCf Status" [ stateExtension="debug/query", stateTransformation="REGEX:.*enabled=(.*)&noCon.*" ] 
+      Type string : STCfNoControlValue "STCf noControlValue" [ stateExtension="debug/query", stateTransformation="REGEX:.*noControlValue=(.*)&controlValue.*" ] 
+      Type string : STCfControlValue "STCf ControlValue" [ stateExtension="debug/query", stateTransformation="REGEX:.*&controlValue=(.*)&nightValue.*" ] 
+      Type string : STCfnightValue "STCf nightValue" [ stateExtension="debug/query", stateTransformation="REGEX:.*&nightValue=(.*)&slope.*" ] 
+      Type string : STCfslope "STCf slope" [ stateExtension="debug/query", stateTransformation="REGEX:.*&slope=(.*)&mqtt.server.*" ] 
+      Type string : STCfMQTTServer "STCf MQTT Server" [ stateExtension="debug/query", stateTransformation="REGEX:.*&mqtt.server=(.*)&mqtt.port.*" ] 
+      Type string : STCfMQTTPort "STCf MQTT Port" [ stateExtension="debug/query", stateTransformation="REGEX:.*&mqtt.port=(.*)&mqtt.user.*" ] 
+      Type string : STCfMQTTUser "STCf MQTT User" [ stateExtension="debug/query", stateTransformation="REGEX:.*&mqtt.user=(.*).*" ] 
+}

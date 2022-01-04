@@ -1,0 +1,21 @@
+Group STCf "STCf (File)" (STCf)
+String STCf_macSTA "STCf_macSTA" (STCf) ["Point"] { channel="http:url:STCf:STCfmacSTA" }
+String STCf_macAP "STCf_macAP" (STCf) ["Point"] { channel="http:url:STCf:STCfmacAP" }
+String STCf_Version "STCf_Version" (STCf) ["Point"] { channel="http:url:STCf:STCfVersion" }
+String STCf_VersionData "STCf_VersionData" (STCf) ["Point"] { channel="http:url:STCf:STCfVersionData" }
+String STCf_SSID "STCf_SSID" (STCf) ["Point"] { channel="http:url:STCf:STCfSSID" }
+String STCf_AS "STCf_adcal.slope" (STCf) ["Point"] { channel="http:url:STCf:STCfAS" }
+String STCf_AO "STCf_adcal.offset" (STCf) ["Point"] { channel="http:url:STCf:STCfAO" }
+String STCf_Sensor "STCf_Sensor" (STCf) ["Point"] { channel="http:url:STCf:STCfSensor" }
+String STCf_Status "STCf_Status" (STCf) ["Point"] { channel="http:url:STCf:STCfStatus" }
+String STCf_NoControl "STCf_noControlValue [JS(k2c.js):%s]" (STCf) ["Point"] { channel="http:url:STCf:STCfNoControlValue" }
+// Tag
+String STCf_ControlValue "STCf_ControlValue [JS(k2c.js):%s]" (STCf) ["Point"] { channel="http:url:STCf:STCfControlValue" }
+// Nacht
+String STCf_nightValue "STCf_nightValue [JS(k2c.js):%s]" (STCf) ["Point"] { channel="http:url:STCf:STCfnightValue" }
+String STCf_slope "STCf_slope" (STCf) ["Point"] { channel="http:url:STCf:STCfslope" }
+String STCf_MQTTServer "STCf_MQTT Server" (STCf) ["Point"] { channel="http:url:STCf:STCfMQTTServer" }
+String STCf_MQTTPort "STCf_MQTT Port" (STCf) ["Point"] { channel="http:url:STCf:STCfMQTTPort" }
+String STCf_MQTTUser "STCf_MQTT User" (STCf) ["Point"] { channel="http:url:STCf:STCfMQTTUser" }
+Number STCf_Nachttemperatur "STCf Nachttemperatur" (STCf)
+Number STCf_Tagtemperatur "STCf Tagtemperatur" (STCf)
