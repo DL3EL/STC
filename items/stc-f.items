@@ -1,3 +1,4 @@
+// V1.0 initial
 Group STCf "STCf (File)" (STCf)
 String STCf_macSTA "STCf_macSTA" (STCf) ["Point"] { channel="http:url:STCf:STCfmacSTA" }
 String STCf_macAP "STCf_macAP" (STCf) ["Point"] { channel="http:url:STCf:STCfmacAP" }
